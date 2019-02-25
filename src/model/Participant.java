@@ -5,8 +5,8 @@ public class Participant {
     private String particip_name;
     private String particip_lastname;
 
-    public Participant(int particip_id, String particip_name, String particip_lastname) {
-        this.particip_id = particip_id;
+    public Participant(String particip_name, String particip_lastname) {
+
         this.particip_name = particip_name;
         this.particip_lastname = particip_lastname;
     }
