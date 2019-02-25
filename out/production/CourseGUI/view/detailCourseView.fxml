@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="421.0" prefWidth="600.0" style="-fx-background-color: #5ce287;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DetailCourseController">
+   <children>
+      <Separator layoutX="30.0" layoutY="91.0" prefHeight="6.0" prefWidth="540.0" />
+      <Label fx:id="lbl_course_name" layoutX="300.0" layoutY="31.0" prefHeight="35.0" prefWidth="165.0" text="Nazwa Kursu" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="92.0" fitWidth="232.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/logo_sda.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="254.0" layoutY="111.0" prefHeight="35.0" prefWidth="233.0" text="Zapisani uczestnicy">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <VBox layoutX="14.0" layoutY="94.0" prefHeight="245.0" prefWidth="201.0">
+         <children>
+            <Label text="Kategoria" textFill="#ff1000">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_course_category" text="..." textFill="#ff1000">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Termin" textFill="#ff1000">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_course_date" text="..." textFill="#ff1000">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Trener" textFill="#ff1000">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_course_trainer" text="..." textFill="#ff1000">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="25.0" prefWidth="141.0" text="Liczba uczestników" textFill="#ff1000">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_course_participants" text="..." textFill="#ff1000">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tf_particip_name" promptText="dodaj imię" />
+            <TextField fx:id="tf_particip_lastname" prefHeight="181.0" prefWidth="146.0" promptText="dodaj nazwisko" />
+         </children>
+      </VBox>
+      <TableView fx:id="tbl_particip" layoutX="223.0" layoutY="153.0" prefHeight="245.0" prefWidth="333.0">
+        <columns>
+          <TableColumn fx:id="col_particip_name" prefWidth="167.0" text="Imię" />
+          <TableColumn fx:id="col_particip_lastname" prefWidth="165.0" text="Nazwisko" />
+        </columns>
+      </TableView>
+      <Button fx:id="save_participant" contentDisplay="CENTER" layoutX="78.0" layoutY="344.0" mnemonicParsing="false" onAction="#save_participant" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: red;" text="ZAPISZ" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="delete_participant" alignment="CENTER" layoutX="78.0" layoutY="374.0" mnemonicParsing="false" onAction="#delete_participant" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: green;" text="USUŃ" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
